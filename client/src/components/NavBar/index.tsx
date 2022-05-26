@@ -37,7 +37,7 @@ export default function NavBar(props: Props) {
         </Button> :  
         <Button 
             colorScheme='purple'
-          >{accountData?.address?.substring(0, 4) + '...' + accountData?.address?.slice(-5)}</Button>}
+          >{accountData.address?.substring(0, 4) + '...' + accountData.address?.slice(-5)}</Button>}
        
         </>
       );

@@ -31,11 +31,7 @@ const App = (): React.ReactElement => {
   });
 
 
-  const { data: articlesCountData } = useQuery(GET_ARTICLES_COUNT, {
-    onCompleted: (data) => {
-      console.log("Loading completed: " + data.articlesCount)
-    }
-  })
+  const { data: articlesCountData } = useQuery(GET_ARTICLES_COUNT, {})
 
   const articles: Article[] = articlesData != null ? articlesData.articles : [];
   const articlesCount = articlesCountData != null ? articlesCountData.articlesCount : 0;
@@ -65,9 +61,8 @@ const App = (): React.ReactElement => {
           articles={articles}
           pageCount={Math.ceil(articlesCount / NUM_PER_PAGE)}
            />}
-      {articles.length == 0 &&  <Text fontSize='4xl'>Let's write a post!</Text>} 
+      {articles.length == 0 &&  <Text fontSize='4xl'>Let's write a post! or the server is not connected</Text>} 
     </Container>}
-
     </>
  
   )

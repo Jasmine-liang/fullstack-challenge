@@ -28,7 +28,7 @@ export const resolvers = {
                 content,
             };
             try {
-                const newArticle = await dbService.addArticle(article)                
+                const newArticle = await dbService.addArticle(article) 
                 return newArticle
                 
             }catch(err){

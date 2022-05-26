@@ -1,5 +1,5 @@
 type Mutation {
-    addArticle(title: String, content: String): Article
+    addArticle(title: String, content: String): [Article]
 }
 
 type Article {

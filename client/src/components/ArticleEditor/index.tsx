@@ -41,6 +41,7 @@ export default function ArticleEditor(props: Props) {
                 isClosable: true,
                 position: 'top'
               })
+            console.log(data)
             router.push('/')
           },
           onError: () => {
@@ -62,7 +63,6 @@ export default function ArticleEditor(props: Props) {
     }
 
     const handleSubmit = (e: any) => {
-        e.preventDefault();
         if(!accountData) {
             toast({
                 title: 'Please connect your wallet!',
@@ -79,6 +79,9 @@ export default function ArticleEditor(props: Props) {
                 duration: 4000,
                 isClosable: true,
               })
+        }
+        if(loading){
+            console.log('loading')
         }
     }
 
